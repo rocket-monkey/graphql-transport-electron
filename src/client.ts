@@ -36,7 +36,7 @@ export class IpcLink extends ApolloLink {
         };
 
         this.observers.set(current, observer);
-        this.ipc.send(this.channel, current, request);
+        this.ipc.send(this.channel, current, JSON.stringify(request));
       },
     );
   }

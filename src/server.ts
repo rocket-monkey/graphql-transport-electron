@@ -66,7 +66,8 @@ export const createSchemaLink = (options: SchemaLinkOptions) => {
 
 export const createIpcExecutor = (options: IpcExecutorOptions) => {
   const channel = options.channel || 'graphql';
-  const listener = (event, id, request: SerializableGraphQLRequest) => {
+  const listener = (event, id, requestJson: string) => {
+    const request: SerializableGraphQLRequest = JSON.parse(requestJson);
     const result: Observable<FetchResult> = executeLink(options.link, {
       ...request,
       query: parse(request.query),

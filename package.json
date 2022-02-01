@@ -1,5 +1,5 @@
 {
-  "name": "graphql-transport-electron",
+  "name": "@rocket-monkey/graphql-transport-electron",
   "version": "1.0.1",
   "description": "Enables inter process communication between a graphql client & server in electron.",
   "main": "lib/server.js",
@@ -52,7 +52,7 @@
     "@types/jest": "^23.3.9",
     "@types/node": "^10.12.10",
     "@types/ramda": "^0.25.44",
-    "electron": "^4.0.2",
+    "electron": "^16.0.7",
     "graphql": "^14.1.1",
     "husky": "^1.1.2",
     "jest": "^23.6.0",
